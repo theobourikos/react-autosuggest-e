@@ -387,7 +387,7 @@ export default class Autosuggest extends Component {
       onSuggestionsFetchRequested({
         value: data.suggestionValue,
         reason: 'suggestion-selected'
-      });
+      }, event);
     } else {
       this.onSuggestionsClearRequested();
     }
@@ -550,7 +550,7 @@ export default class Autosuggest extends Component {
           onFocus && onFocus(event);
 
           if (shouldRender) {
-            onSuggestionsFetchRequested({ value, reason: 'input-focused' });
+            onSuggestionsFetchRequested({ value, reason: 'input-focused' }, event);
           }
         }
       },
@@ -590,7 +590,7 @@ export default class Autosuggest extends Component {
         });
 
         if (shouldRender) {
-          onSuggestionsFetchRequested({ value, reason: 'input-changed' });
+          onSuggestionsFetchRequested({ value, reason: 'input-changed' }, event);
         } else {
           this.onSuggestionsClearRequested();
         }
@@ -606,7 +606,7 @@ export default class Autosuggest extends Component {
                 onSuggestionsFetchRequested({
                   value,
                   reason: 'suggestions-revealed'
-                });
+                }, event);
                 this.revealSuggestions();
               }
             } else if (suggestions.length > 0) {
@@ -711,7 +711,7 @@ export default class Autosuggest extends Component {
                   onSuggestionsFetchRequested({
                     value: newValue,
                     reason: 'escape-pressed'
-                  });
+                  }, event);
                 } else {
                   this.onSuggestionsClearRequested();
                 }
