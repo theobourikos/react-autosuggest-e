@@ -1,11 +1,11 @@
 {
   "name": "react-autosuggest-e",
-  "version": "9.4.3",
+  "version": "9.4.4",
   "description": "WAI-ARIA compliant React autosuggest component",
   "main": "dist/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/moroshko/react-autosuggest.git"
+    "url": "https://github.com/theobourikos/react-autosuggest-e"
   },
   "author": "Misha Moroshko <michael.moroshko@gmail.com>",
   "scripts": {
