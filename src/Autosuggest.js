@@ -384,10 +384,13 @@ export default class Autosuggest extends Component {
     onSuggestionSelected && onSuggestionSelected(event, data);
 
     if (alwaysRenderSuggestions) {
-      onSuggestionsFetchRequested({
-        value: data.suggestionValue,
-        reason: 'suggestion-selected'
-      }, event);
+      onSuggestionsFetchRequested(
+        {
+          value: data.suggestionValue,
+          reason: 'suggestion-selected'
+        },
+        event
+      );
     } else {
       this.onSuggestionsClearRequested();
     }
@@ -550,7 +553,10 @@ export default class Autosuggest extends Component {
           onFocus && onFocus(event);
 
           if (shouldRender) {
-            onSuggestionsFetchRequested({ value, reason: 'input-focused' }, event);
+            onSuggestionsFetchRequested(
+              { value, reason: 'input-focused' },
+              event
+            );
           }
         }
       },
@@ -590,7 +596,10 @@ export default class Autosuggest extends Component {
         });
 
         if (shouldRender) {
-          onSuggestionsFetchRequested({ value, reason: 'input-changed' }, event);
+          onSuggestionsFetchRequested(
+            { value, reason: 'input-changed' },
+            event
+          );
         } else {
           this.onSuggestionsClearRequested();
         }
@@ -603,10 +612,13 @@ export default class Autosuggest extends Component {
           case 38: // ArrowUp
             if (isCollapsed) {
               if (shouldRenderSuggestions(value)) {
-                onSuggestionsFetchRequested({
-                  value,
-                  reason: 'suggestions-revealed'
-                }, event);
+                onSuggestionsFetchRequested(
+                  {
+                    value,
+                    reason: 'suggestions-revealed'
+                  },
+                  event
+                );
                 this.revealSuggestions();
               }
             } else if (suggestions.length > 0) {
@@ -708,10 +720,13 @@ export default class Autosuggest extends Component {
                 this.maybeCallOnChange(event, newValue, 'escape');
 
                 if (shouldRenderSuggestions(newValue)) {
-                  onSuggestionsFetchRequested({
-                    value: newValue,
-                    reason: 'escape-pressed'
-                  }, event);
+                  onSuggestionsFetchRequested(
+                    {
+                      value: newValue,
+                      reason: 'escape-pressed'
+                    },
+                    event
+                  );
                 } else {
                   this.onSuggestionsClearRequested();
                 }
