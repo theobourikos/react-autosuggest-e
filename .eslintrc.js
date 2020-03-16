@@ -11,7 +11,7 @@ module.exports = {
   rules: {
     'array-callback-return': 2,
     camelcase: [2, { properties: 'always' }],
-    'linebreak-style': [2, 'unix'],
+    'linebreak-style': [2, 'windows'],
     'no-cond-assign': [2, 'always'],
     'no-console': 2,
     'no-global-assign': 2,

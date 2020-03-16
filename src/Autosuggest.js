@@ -314,11 +314,11 @@ export default class Autosuggest extends Component {
   }
 
   maybeCallOnChange(event, newValue, method) {
-    const { value, onChange } = this.props.inputProps;
+    const { onChange } = this.props.inputProps;
 
-    if (newValue !== value) {
-      onChange(event, { newValue, method });
-    }
+    //;if (newValue !== value) {
+    onChange(event, { newValue, method });
+    //}
   }
 
   willRenderSuggestions(props) {
