@@ -1,6 +1,6 @@
 {
   "name": "react-autosuggest-e",
-  "version": "9.4.4",
+  "version": "9.4.5",
   "description": "WAI-ARIA compliant React autosuggest component",
   "main": "dist/index.js",
   "repository": {
